@@ -1,0 +1,16 @@
+{% for au in tab%}
+<img src="{{au.picture}}" width="20px" hight="20px">
+{{au.id}}
+{{au.username |upper}}
+<a href="{{path('details',{'id':au.id})}}">detail</a>
+<br>
+{%endfor%}
+{% if (tab is empty)%}
+no authors
+
+{%endif%}
+<br>
+nb authors:{{tab |length}}
+
+
+
